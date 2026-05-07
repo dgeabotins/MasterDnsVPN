@@ -34,6 +34,8 @@ DATA_ENCRYPTION_METHOD = 2
 # Shared encryption key.
 # Required on the client.
 # Must match the server-side key file contents.
+# NOTE (personal): Leave empty here; load from environment variable
+# MASTERDNSVPN_ENCRYPTION_KEY at runtime to avoid committing secrets.
 ENCRYPTION_KEY = ""
 
 # ------------------------------------------------------------------------------
@@ -73,11 +75,4 @@ SOCKS5_PASS = "master_dns_vpn"
 
 # When true, the client exposes a local DNS server on LOCAL_DNS_IP:LOCAL_DNS_PORT.
 LOCAL_DNS_ENABLED = false
-LOCAL_DNS_IP = "127.0.0.1"
-LOCAL_DNS_PORT = 53
-
-# Local DNS cache sizing.
-# Must be >= 1.
-LOCAL_DNS_CACHE_MAX_RECORDS = 10000
-
-# TTL used by the local DNS cac
+LOCAL_DNS
